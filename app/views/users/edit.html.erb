@@ -1,2 +1,15 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_with model: @user, method: :patch do |f| %>
+  <div>
+    <%= f.label :アイコン %>
+    <%= f.file_field :header_image, accept: "image/*" %>
+  </div>
+
+  <div>
+    <%= f.label :名前 %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.submit "編集内容を保存", class: "btn btn-success btn-lg fontweight-bold" %>
+  </div>
+<% end %>
