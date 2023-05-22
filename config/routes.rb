@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+  get 'posts/show'
+  get 'posts/edit'
   resources :users, only: [:edit, :show]
   devise_for :users
   root to: 'homes#top'
