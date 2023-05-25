@@ -1,2 +1,13 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<%= form_with model: @post, method: :post do |f| %>
+  <div>
+    <%= f.label :posted_text, "タイトル" %>
+    <%= f.text_area :posted_text %>
+  </div>
+  <div>
+    <%= f.label :sentence, "内容"　%>
+    <%= f.text_area :sentence %>
+  </div>
+  <div>
+    <%= f.submit "投稿",class:"btn btn-info mt-4" 
+  </div>
+<% end %>
