@@ -1,8 +1,11 @@
 <div class="container" style="margin-left:100px;">
+  <div>
+    <%= link_to "投稿", new_post_path %>
+  </div>
   <div class="row d-flex justify-content-between" style="width:100%;">
-  <% @users.each do |user| %>
+  <% @posts.each do |post| %>
     <div style="width:35%; height:425px; background-color:blue;">
-      <%= image_tag user.avater_image.variant(resize: "100x100", gravity: "center", crop: "100x100+0+0").processed, style: "border-radius: 50%;" %>
+      <%= image_tag post.user.avater_image.variant(resize: "100x100", gravity: "center", crop: "100x100+0+0").processed, style: "border-radius: 50%;" %>
     </div>
     <div style="width:60%; height:425px; background-color:red;"></div>
   <% end %>
@@ -10,4 +13,4 @@
 </div>
 
 <%# 投稿したアカウントを表示するようにする
-postから情報を持ってくればうまくいくはず
+postから情報を持ってくればうまくいくはず %>

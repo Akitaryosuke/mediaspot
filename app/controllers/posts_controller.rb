@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def new
+    @post = Post.new
   end
 
   def show
@@ -7,4 +8,10 @@ class PostsController < ApplicationController
 
   def edit
   end
+
+  private
+  def post_params
+    params.require(:post).permit(:user_id, :posted_text, :sentence)
+  end
+
 end
