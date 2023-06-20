@@ -5,7 +5,7 @@
   <div class="row d-flex justify-content-between" style="width:100%;">
   <% @posts.each do |post| %>
     <div style="width:35%; height:425px; background-color:blue;">
-      <%= image_tag post.user.avater_image.variant(resize: "100x100", gravity: "center", crop: "100x100+0+0").processed, style: "border-radius: 50%;" %>
+      <%# image_tag post.user.avater_image.variant(resize: "100x100", gravity: "center", crop: "100x100+0+0").processed, style: "border-radius: 50%;" %>
     </div>
     <div style="width:60%; height:425px; background-color:red;">
       <%= post.posted_text %>
