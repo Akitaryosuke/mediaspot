@@ -1,3 +1,6 @@
 <div>
+  <%= image_tag @user.get_avater_image(resize: "120x120^", gravity: "center", crop: "120x120+0+0"), style: "border-radius: 50%;" %>
+</div>
+<div>
   <%= link_to "編集", edit_user_path %>
 </div>
