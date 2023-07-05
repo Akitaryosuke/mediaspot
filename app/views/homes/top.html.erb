@@ -4,11 +4,13 @@
   </div>
   <div class="row d-flex justify-content-between" style="width:100%;">
   <% @posts.each do |post| %>
-    <div style="width:35%; height:425px; background-color:blue;">
-      <%# image_tag post.user.avater_image.variant(resize: "65x65^", gravity: "center", crop: "65x65+0+0").processed, style: "border-radius: 50%;" %>
-    </div>
-    <div style="width:60%; height:425px; background-color:red;">
-      <%= post.posted_text %>
+    <div class="row d-flex" style="width:100%;">
+      <div style="background-color:blue; margin-right:20px; margin-bottom:20px;">
+      <%= image_tag post.user.avater_image.variant(resize: "65x65^", gravity: "center", crop: "65x65+0+0").processed, style: "border-radius: 50%;" %>
+      </div>
+      <div style="width:60%; background-color:red; margin-bottom:20px;">
+        <%= post.posted_text %>
+      </div>
     </div>
   <% end %>
   </div>
